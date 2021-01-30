@@ -10,8 +10,8 @@
     --color-dark-grey: #4d4d4d;
     --color-grey: #616161;
     --color-light-grey: #7c7979;
-    --color-blue: #73aace;
-    --color-dark-blue: #1c7ed6;
+    --color-blue: #1c7ed6;
+    --color-blue-light: #89D4FC;
     --color-yellow: #fff7d1;
     --color-orange: #feb546;
     --color-black: #000000;
@@ -42,11 +42,20 @@ a {
     color: var(--color-white);
 }
 
-ul {
-    list-style: none; /*땡땡이 없애기*/
+ul {    
     padding-left: 0;
 }
 
+li {
+    list-style: none; /*땡땡이 없애기*/
+}
+
+button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
   /* Typography */
 
 h1 {
@@ -108,7 +117,37 @@ p {
 }
 
 .navbar__menu__item:hover {
-    background-color: var(--color-dark-blue);
+    background-color: var(--color-blue-light);
+    color: var(--color-dark-grey);
     border-radius: var(--size-border-radius);
     transition: 0.5s;
+}
+
+#home {
+    background: url('imgs/background.jpg') center/cover no-repeat;
+    padding: 40px;
+    text-align: center;
+}
+
+.home__avatar {
+    width: 250px;    
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid var(--color-light-white)
+}
+
+.home__title,
+.home__description {
+    color: var(--color-white)
+}
+
+.home__contact {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-bold);
+    margin: 24px;
+    padding: 8px 12px;
+    border: 2px solid var(--color-white);
+    border-radius: var(--size-border-radius);
+    color: var(--color-white);
+
 }
