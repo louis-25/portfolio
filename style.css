@@ -30,6 +30,9 @@
 
     /* Size */
     --size-border-radius: 4px;
+
+    /* Animation */
+    --animation-duration: 300ms;
 }
 
 body {
@@ -149,5 +152,69 @@ p {
     border: 2px solid var(--color-white);
     border-radius: var(--size-border-radius);
     color: var(--color-white);
+}
 
+/* Section common*/
+.section { /*섹션 공통*/
+    padding: 50px;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* About */
+.about__majors {
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0;
+}
+
+.major__icon {
+    width: 170px;
+    height: 170px;
+    line-height: 170px;
+    font-size: 70px;
+    margin: auto; /*가운데 정렬*/
+    border: 1px solid var(--color-blue-light);
+    color: var(--color-blue-light);
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+.major__icon:hover {
+    background-color: var(--color-blue-light);
+    transition: var(--animation-duration);
+}
+
+/*major__icon위에 커서를 대면 i태그에 적용되는 css*/
+.major__icon:hover i { 
+    color: var(--color-blue);
+    transform: scale(1.3);    
+}
+
+.major__icon i { 
+    transition: all var(--animation-duration) ease; /*모든 속성값을 350ms동안 ease옵션*/
+}
+
+.job {
+    display: flex; /*한줄에 하나씩*/
+    align-items: center;    
+}
+
+.job__description {
+    margin: 0 16px;
+    text-align: left;
+}
+
+.job__name,
+.job__period {
+    color: var(--color-light-grey);
+}
+
+.job__name {
+    font-size: var(--font-small);
+}
+
+.job__period {
+    font-size: var(--font-micro);    
 }
