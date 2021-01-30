@@ -59,7 +59,7 @@ button {
     border: none;
     outline: none;
 }
-  /* Typography */
+  /* --------Typography-------- */
 
 h1 {
     font-size: var(--font-large);
@@ -89,7 +89,7 @@ p {
     margin: 4px 0;
 }
 
-/* Navbar */
+/* --------Navbar-------- */
 #navbar {
     display: flex;
     justify-content: space-between;
@@ -154,15 +154,20 @@ p {
     color: var(--color-white);
 }
 
-/* Section common*/
+/* --------Section common--------*/
+
 .section { /*섹션 공통*/
     padding: 50px;
-    text-align: center;
-    max-width: 1200px;
+    text-align: center;    
     margin: auto;
 }
 
-/* About */
+.section__container {
+    max-width: 1200px;
+    margin: auto;
+}
+/* --------About-------- */
+
 .about__majors {
     display: flex;
     justify-content: space-between;
@@ -217,4 +222,57 @@ p {
 
 .job__period {
     font-size: var(--font-micro);    
+}
+
+/* --------Skill--------*/
+
+#skill {
+    background-color: var(--color-blue-light);
+}
+
+.skillset {
+    display: flex;
+    background-color: var(--color-light-grey);
+    color: var(--color-light-white)
+    margin: 20px 0;
+}
+
+.skillset__title {
+    color: var(--color-white);
+}
+
+.skillset__left {
+    flex-basis: 60%;
+    background-color: var(--color-dark-grey);
+    padding: 20px 40px;
+}
+
+.skillset__right {
+    flex-basis: 40%;
+}
+
+.skill {
+    margin-bottom: 32px;
+}
+
+.skill__value {    
+    height: 3px;
+    background-color: var(--color-blue);
+}
+
+.skill__description {
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-white);
+}
+
+.skill__bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-grey);
+}
+
+.tools, 
+.etc {
+    padding: 20px;
 }
