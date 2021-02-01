@@ -25,8 +25,21 @@ navbarMenu.addEventListener('click', (event) => {
         return;
     }
 
-    const scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({ behavior: 'smooth'});
-    
-
+    scrollIntoViews(link);
 });
+
+const contact_btn = document.querySelector('.home__contact');
+contact_btn.addEventListener('click', (event) => {
+    console.log(event.target.dataset.link);
+    const target = event.target;
+    const link = target.dataset.link;
+    if (link == null) { //링크가 있는경우만 실행
+        return;
+    }    
+    scrollIntoViews(link);
+})
+
+function scrollIntoViews(selector) {
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({ behavior: 'smooth'});
+}
