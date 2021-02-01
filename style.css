@@ -91,21 +91,41 @@ p {
 
 /* --------Navbar-------- */
 #navbar {
+    position: fixed;
     display: flex;
-    justify-content: space-between;
-    background-color: var(--color-blue);
+    width: 100%;
+    justify-content: space-between;    
     align-items: center;
     color: var(--color-white);
-    padding: 16px;
+    padding-top: 8px;    
+    background-color: transparent;    
+    transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.navbar--dark{
+    background-color: var(--color-blue);    
+    padding: 2px;
+    opacity: 0.95;
+    z-index: 1;
 }
 
 .navbar__menu {
     display:flex;
 }
 
+.navbar__menu ul,
+.navbar__logo {
+    padding: 0 8px;
+}
+
+#navbar a {
+    color: var(--color-dark-grey);
+}
+
 .navbar__logo {
     font-size: var(--font-medium);
     font-weight: var(--weight-bold);
+    color: var(--color-dark-grey);
 }
 
 .navbar__menu__item {
@@ -139,6 +159,7 @@ p {
 #home {
     background: url('imgs/background.jpg') center/cover no-repeat;
     padding: 40px;
+    padding-top: 120px;
     text-align: center;
 }
 
@@ -334,7 +355,7 @@ p {
 
 .work__projects {
     display: flex;
-    flex-wrap: wrpa;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -503,8 +524,8 @@ p {
         flex-direction: column;
     }
 
-    .project {
-        flex-grow: 1;
+    .project {                   
+        /* flex-grow: 1;         */
     }
 
     .testimonial__avatar {
