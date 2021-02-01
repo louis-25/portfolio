@@ -15,7 +15,7 @@ document.addEventListener('scroll', () => {
     }
 });
 
-// Handle scrolling when tapping on the navbar menu
+// navbar메뉴
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
     console.log(event.target.dataset.link);
@@ -28,6 +28,8 @@ navbarMenu.addEventListener('click', (event) => {
     scrollIntoViews(link);
 });
 
+
+//home contact button
 const contact_btn = document.querySelector('.home__contact');
 contact_btn.addEventListener('click', (event) => {
     console.log(event.target.dataset.link);
@@ -38,6 +40,14 @@ contact_btn.addEventListener('click', (event) => {
     }    
     scrollIntoViews(link);
 })
+
+// home 스크롤 시 투명하게
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+    // console.log(1 - window.scrollY / homeHeight);
+    home.style.opacity = (1 - window.scrollY / homeHeight);
+});
 
 function scrollIntoViews(selector) {
     const scrollTo = document.querySelector(selector);
