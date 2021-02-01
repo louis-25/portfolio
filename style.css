@@ -502,6 +502,29 @@ p {
     color: var(--color-blue);    
 }
 
+/* Scroll */
+.arrow-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;    
+    font-size: 50px;
+    border-radius: 50%;
+    color: var(--color-white);
+    background-color: var(--color-orange);    
+    /* display: none; */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms ease-in;
+}
+
+.arrow-up.visible {
+    opacity: 1;
+    pointer-events: auto;
+    /* display: block; */
+}
+
 /*-------- 반응형-모바일 --------*/
 @media screen and (max-width:768px) {
     .navbar__toggle-btn {
