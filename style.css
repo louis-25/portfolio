@@ -146,7 +146,7 @@ p {
 
 .navbar__toggle-btn {
     position:absolute;
-    top: 24px;
+    top: 10px;
     right: 32px;
     font-size: 24px;
     color: var(--color-white);
@@ -389,7 +389,7 @@ p {
 .project:hover .project__description,
 .project:hover .project__description h3,
 .project:hover .project__description span{
-    opacity: 0.7;
+    opacity: 0.75;
     transform: translateY(0px);
 }
 
@@ -418,7 +418,7 @@ p {
 }
 
 .project__description h3 {
-    color: var(--color-white)
+    color: var(--color-orange)
 }
 
 .project__description h3,
@@ -427,14 +427,14 @@ p {
     transition: all 200ms ease-in;
 }
 
-.project__description h3:after {
+.project__description h3:after { /*중간 실선 */
     content: '';
     display: block;
     position: relative;
     left: 50%;
-    width: 25px;
+    width: 50px;
     height: 2px;
-    margin-left: -12px;
+    transform: translateX(-50%);
     margin-top: 8px;
     background-color: var(--color-dark-white);
 }
@@ -535,13 +535,18 @@ p {
 
 /*-------- 반응형-모바일 --------*/
 @media screen and (max-width:768px) {
-    .navbar__toggle-btn {
+    .navbar__toggle-btn {                
         display: block;
     }
 
     #navbar {
         flex-direction: column;
         align-items: flex-start;
+        background-color: var(--color-blue);
+    }
+
+    #navbar.navbar--dark {
+        padding-top: 10px;
     }
 
     .navbar__menu {
@@ -549,6 +554,10 @@ p {
         text-align: center;
         width: 100%;
         display: none;
+    }
+    
+    .navbar__menu.open {
+        display: block;
     }
 
     .about__majors {

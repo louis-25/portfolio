@@ -24,10 +24,15 @@ navbarMenu.addEventListener('click', (event) => {
     if (link == null) { //링크가 있는경우만 실행
         return;
     }
-
+    navbarMenu.classList.remove('open');
     scrollIntoViews(link);
 });
 
+// navbar 햄버거
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
+});
 
 //home contact button
 const contact_btn = document.querySelector('.home__contact');
