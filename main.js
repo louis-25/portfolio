@@ -74,6 +74,14 @@ workBtnContainer.addEventListener('click', (event) => {
         return;
     }
 
+    // 카테고리 클릭
+    const active = document.querySelector('.category__btn.selected');
+    active.classList.remove('selected');
+    //버튼을 클릭한경우 그대로 이벤트 사용 버튼이 아닌 span부분 클릭했을때는 부모노드에서 선택
+    const target = event.target.nodeName === 'BUTTON' ? event.target : event.target.parentNode;
+    
+    target.classList.add('selected');
+
     projectContainer.classList.add('anim-out');    
     setTimeout(() => {
         projects.forEach((project) => {
