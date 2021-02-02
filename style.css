@@ -206,7 +206,7 @@ p {
 
 .about__majors {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 80px 0;
 }
 
@@ -240,6 +240,17 @@ p {
 .job {
     display: flex; /*한줄에 하나씩*/
     align-items: center;    
+    width: 33%;
+    margin: auto;
+    justify-content: center;    
+    transition: all var(--animation-duration) ease-in-out;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.job:hover {
+    background-color: var(--color-orange);
+    cursor: pointer;
 }
 
 .job__description {
@@ -249,7 +260,7 @@ p {
 
 .job__name,
 .job__period {
-    color: var(--color-light-grey);
+    color: var(--color-black);
 }
 
 .job__name {
@@ -268,6 +279,8 @@ p {
 
 .skillset {
     display: flex;
+    flex-direction: column;
+    width: 100%;
     background-color: var(--color-light-grey);
     color: var(--color-light-white)
     margin: 20px 0;
@@ -277,14 +290,21 @@ p {
     color: var(--color-white);
 }
 
+.certificate {
+    padding-top: 30px;
+    display: flex;    
+}
+
 .skillset__left {
-    flex-basis: 60%;
+    /* flex-basis: 60%; */
     background-color: var(--color-dark-grey);
     padding: 20px 40px;
+    height: 60%;
 }
 
 .skillset__right {
-    flex-basis: 40%;
+    /* flex-basis: 40%; */
+    height: 40%;
 }
 
 .skill {
@@ -308,10 +328,23 @@ p {
     background-color: var(--color-grey);
 }
 
-.tools,
+.tools {
+    float:left;
+    width:49%;
+    height:100%;
+    border-right: 2px solid var(--color-dark-grey);
+}
+
+.platform {
+    float: right;
+    width: 49%;
+    height: 100%;
+}
+
+/* .tools,
 .etc {
     padding: 20px;
-}
+} */
 
 /* --------Work--------*/
 .category__btn {
@@ -361,7 +394,8 @@ p {
 .work__projects {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
+    padding-left: 12%;
     opacity: 1;
     transition: all var(--animation-duration) ease-out;
 }
@@ -441,7 +475,8 @@ p {
 
 /* --------Testimonial-------- */
 #testimonials {
-    background-color: var(--color-light-white);    
+    background-color: var(--color-light-white);  
+    display: none;  
 }
 
 .testimonials {
@@ -588,6 +623,11 @@ p {
         display: block;
     }
 
+    .work__projects {
+        justify-content: center;
+        padding: 0;
+    }
+
     .section {
         padding: 16px;
     }
@@ -597,12 +637,24 @@ p {
         margin-bottom: 0px;      
     }
 
-    .major {
-        margin-bottom: 30px;
+    .job {
+        width: 100%;
     }
 
-    .skillset {
-        flex-direction: column;
+    .job__description {
+        margin: 10px;
+    }
+
+    .major {
+        margin-bottom: 30px;
+    }    
+
+    .certificate {
+        display: block;
+    }
+
+    .certificate img {
+        width: 100%;
     }
 
     .category__btn {
@@ -612,7 +664,7 @@ p {
 
     .project {                   
         /* flex-grow: 1;         */
-    }
+    }        
 
     .testimonial {
         flex-direction: column;
