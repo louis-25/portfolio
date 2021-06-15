@@ -282,8 +282,7 @@ p {
     flex-direction: column;
     width: 100%;
     background-color: var(--color-light-grey);
-    color: var(--color-light-white);
-    margin: 20px 0;
+    color: var(--color-light-white);    
 }
 
 .skillset__title {
